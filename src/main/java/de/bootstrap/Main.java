@@ -7,20 +7,13 @@ public class Main {
 
     public static void main(String[] args) {
 
-        Scanner scanInput = new Scanner(System.in);
+        String username = args[0];
 
-        System.out.print("Please enter your bitbucket username: ");
-        String username = scanInput.nextLine();
+        String password = args[1];
 
+        String filePath = args[2];
 
-        System.out.print("Please enter your password: ");
-        String password = scanInput.nextLine();
-
-        System.out.print("Please enter your absolute Path to configuration file: ");
-        String filePath = scanInput.nextLine();
-
-        System.out.print("Please enter your destination Path for the output file: ");
-        String outputPath = scanInput.nextLine();
+        String outputPath = args[3];
 
         BootstrapTask.bootstrap(username, password, filePath, outputPath);
 
